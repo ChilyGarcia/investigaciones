@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/tailwindlabs/tailwindcss@v2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.4/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="navbar bg-[#320642]">
+      <div class="flex-1">
+        <a class="btn bg-white text-xl ml-6">
+          <img class="w-16" src="public/images/logo-investigacion.png" />
+        </a>
+      </div>
+      <div class="flex-none">
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn m-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a id="btnLogOut">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+                  />
+                </svg>
+                Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row mt-16">
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\revista-image.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nueva revista</h2>
+            <p>Dale click al siguiente boton e ingresa una nueva revista:</p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button class="btn btn-primary" onclick="my_modal_5.showModal()">
+                Nuevo
+              </button>
+              <dialog
+                id="my_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="revistaForm">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva revista</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion de la revista</span
+                            >
+                          </div>
+                          <input
+                            id="description"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Titulo del articulo</span>
+                          </div>
+                          <input
+                            id="tittle"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre de la revista</span>
+                          </div>
+                          <input
+                            id="name"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año de publicacion</span>
+                          </div>
+                          <input
+                            id="age"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Categoría de revista segun Publindex</span
+                            >
+                          </div>
+                          <input
+                            id="category"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Ajuntar revista</span>
+                        </div>
+                        <input
+                          id="pdfFile"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex justify-center items-center w-full">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+
+                      <div class="flex justify-center items-center w-full">
+                        <button
+                          type="button"
+                          id="closeModalMagazine"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\libros.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nuevo libro</h2>
+            <p>Dale click al siguiente boton e ingresa un nuevo libro</p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button class="btn btn-primary" onclick="mt_modal_6.showModal()">
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_6"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formBook" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevo libro</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del libro</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionBook"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del libro</span>
+                          </div>
+                          <input
+                            id="nameBook"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Editorial</span>
+                          </div>
+                          <input
+                            id="editorial"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">ISBN</span>
+                          </div>
+                          <input
+                            id="isbn"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Adjuntar certificacion de la editorial</span
+                          >
+                        </div>
+                        <input
+                          id="pdf1"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Ajuntar PDF del libro</span>
+                        </div>
+                        <input
+                          id="pdf2"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex justify-center items-center w-full">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex justify-center items-center w-full">
+                        <button type="button" id="closeModalBook" class="btn">
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\capitulos.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nuevo capitulo de libro</h2>
+            <p>
+              Dale click al sigueinte boton e ingresa un nuevo capitulo de libro
+            </p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_chapter.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_chapter"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formChapter" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevo capitulo de libro</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del capitulo</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del libro 01</span>
+                          </div>
+                          <input
+                            id="nameChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Titulo del capítulo 01</span
+                            >
+                          </div>
+                          <input
+                            id="tittleChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">ISBN</span>
+                          </div>
+                          <input
+                            id="isbnChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Editorial</span>
+                          </div>
+                          <input
+                            id="editorialChapter"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Adjuntar certificacion de la editorial del
+                            capitulo</span
+                          >
+                        </div>
+                        <input
+                          id="pdf1Chapter"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Ajuntar PDF del libro</span>
+                        </div>
+                        <input
+                          id="pdf2Chapter"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button
+                          type="button"
+                          id="closeModalChapter"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row mt-10 mb-10">
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\tesis.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nueva direccion de tesis</h2>
+            <p>
+              Dale click al siguiente boton e ingresa una nueva direccion de
+              tesis
+            </p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_thesis.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_thesis"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formTesis" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva direccion de tesis</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Descripcion de tesis</span>
+                          </div>
+                          <input
+                            id="descriptionTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Titulo tesis 01</span>
+                          </div>
+                          <input
+                            id="tittleTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nivel</span>
+                          </div>
+                          <select
+                            id="nivelTesis"
+                            class="select select-bordered"
+                          >
+                            <option disabled selected>
+                              Selecciona algun opcion
+                            </option>
+                            <option>Pregrado</option>
+                            <option>Maestría</option>
+                            <option>Doctorado</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del autor</span>
+                          </div>
+                          <input
+                            id="nameAutor"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año</span>
+                          </div>
+                          <input
+                            id="anoTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Univesidad de presentacion</span
+                            >
+                          </div>
+                          <input
+                            id="universidadTesis"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Adjuntar el pdf de acta</span
+                          >
+                        </div>
+                        <input
+                          id="pdfThesisDirection"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button type="button" id="closeModalThesis" class="btn">
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\consultoria.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nueva consultoria</h2>
+            <p>Dale click al siguiente boton e ingresa una nueva consultoria</p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_consultancy.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_consultancy"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formConsultancy" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva consultoria</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion de la consultoria</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionConsultancy"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre de la empresa</span>
+                          </div>
+                          <input
+                            id="nameCompany"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Año de la consultoria</span
+                            >
+                          </div>
+                          <input
+                            id="ageConsultancy"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Adjuntar contrato o convenio de la
+                            consultoría</span
+                          >
+                        </div>
+                        <input
+                          id="pdf1Consultancy"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Ajuntar certificación de culminacion de
+                            consultoría</span
+                          >
+                        </div>
+                        <input
+                          id="pdf2Consultancy"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button
+                          type="button"
+                          id="closeModalConsultancy"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\consultoria.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Ponencias</h2>
+            <p>Dale click al siguiente boton e ingresa una nueva ponencia</p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_presentation.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_presentation"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formPresentation" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nueva ponencia</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del libro</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionPresentation"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Titulo de la ponencia</span
+                            >
+                          </div>
+                          <input
+                            id="tittlePresentation"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Contexto ponencia</span>
+                          </div>
+                          <select
+                            id="contextPresentation"
+                            class="select select-bordered"
+                          >
+                            <option disabled selected>
+                              Selecciona algun opcion
+                            </option>
+                            <option>Nacional</option>
+                            <option>Internacional</option>
+                          </select>
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Nombre del evento de ponencia</span
+                            >
+                          </div>
+                          <input
+                            id="namePresentation"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Certificacion de ponencia</span
+                          >
+                        </div>
+                        <input
+                          id="pdfFilePresentation"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button
+                          type="button"
+                          id="closeModalPresentation"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row mt-10 mb-10">
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\prodcuts.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Otros productos</h2>
+            <p>Dale click al siguiente boton e ingresa un nuevo producto</p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_productos.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_productos"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formOtherProducts" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevos productos</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del producto</span>
+                          </div>
+                          <input
+                            id="nameOtherProduct"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Adjuntar evidencia producto</span
+                          >
+                        </div>
+                        <input
+                          id="pdfFileOtherProduct"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button
+                          type="button"
+                          id="closeModalProducts"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\software.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nuevo registro de software</h2>
+            <p>
+              Dale click al siguiente boton e ingresa un nuevo registro de
+              software
+            </p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_software.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_software"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formSoftwareRegistration" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">
+                      Nuevo registro de software
+                    </h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion del registro de software</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionSoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre del software</span>
+                          </div>
+                          <input
+                            id="nameSoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Entidad que avala</span>
+                          </div>
+                          <input
+                            id="entitySoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año</span>
+                          </div>
+                          <input
+                            id="ageSoftware"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text">Adjuntar registro</span>
+                        </div>
+                        <input
+                          id="pdfFileSoftwareRegistration"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn btn-primary">
+                          Guardar
+                        </button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button
+                          type="button"
+                          id="closeModalSoftware"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full justify-center items-center">
+        <div class="card card-compact w-80 bg-base-100 shadow-xl">
+          <figure>
+            <img src="public\images\registro-marca.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Registro de marcas</h2>
+            <p>
+              Dale click al siguiente boton e ingresa un nuevo registro de
+              marcas
+            </p>
+            <div class="card-actions justify-end">
+              <!-- MODAL -->
+              <button
+                class="btn btn-primary"
+                onclick="mt_modal_marcas.showModal()"
+              >
+                Nuevo
+              </button>
+              <dialog
+                id="mt_modal_marcas"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <form id="formTrademarkRegistration" method="dialog">
+                  <div class="modal-box">
+                    <h3 class="font-bold text-lg">Nuevo registro de marcas</h3>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text"
+                              >Descripcion de registro de marca</span
+                            >
+                          </div>
+                          <input
+                            id="descriptionTrademark"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Nombre de la marca</span>
+                          </div>
+                          <input
+                            id="nameTrademark"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+
+                      <div class="flex w-full">
+                        <label class="form-control w-full">
+                          <div class="label">
+                            <span class="label-text">Año</span>
+                          </div>
+                          <input
+                            id="ageTrademark"
+                            type="text"
+                            class="input input-bordered w-full"
+                          />
+                        </label>
+                      </div>
+                      <div class="flex flex-col w-full">
+                        <div class="label">
+                          <span class="label-text"
+                            >Certificacion de ponencia</span
+                          >
+                        </div>
+                        <input
+                          id="pdfFileTrademarkRegistration"
+                          type="file"
+                          class="file-input file-input-bordered file-input-primary w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex w-full mt-10">
+                      <div class="flex w-full justify-center items-center">
+                        <button type="submit" class="btn">Guardar</button>
+                      </div>
+                      <div class="flex w-full justify-center items-center">
+                        <button
+                          type="button"
+                          id="closeModalTrademark"
+                          class="btn"
+                        >
+                          Cerrar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="errorDiv" class="toast toast-end" style="display: none">
+      <div class="alert alert-error">
+        <span class="text-white"
+          >No se pudo realizar el registro correctamente</span
+        >
+      </div>
+    </div>
+
+    <div id="successDiv" class="toast toast-end" style="display: none">
+      <div class="alert alert-success">
+        <span class="text-white">Registro realizado con éxito</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
